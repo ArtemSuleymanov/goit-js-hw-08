@@ -1,0 +1,18 @@
+body {
+    max-width: 1128px;
+    padding: 0 156px;
+    margin: 0 auto;
+}
+ul {
+    list-style-type: none;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-image {
+    width: 360px;
+    height: 200px;
+    object-fit: cover;
+}
