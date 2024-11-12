@@ -72,7 +72,7 @@ const images = [
     <img
       class="gallery-image"
       src="${preview}"
-      data-source="large-image.jpg"
+      data-source="${original}"
       alt="${description}"
     />
   </a>
@@ -90,5 +90,10 @@ galleryContainer.addEventListener(`click`, (event) =>{
     };
 
     const fullImageURL = event.target.dataset.source;
-    console.log(fullImageURL);
+
+    const instance = basicLightbox.create(`
+      <img src="${fullImageURL}" width="1112" height="640" alt="${event.target.alt}">
+      `);
+
+      instance.show();
 });
